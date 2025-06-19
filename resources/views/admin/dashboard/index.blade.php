@@ -36,7 +36,7 @@
     <main class="container mx-auto px-4 sm:px-6 py-10 text-center">
         <h1 class="text-3xl sm:text-4xl font-extrabold mb-10 text-yellow-900">Dashboard Admin</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <a href="#"
+            <a href="{{ route('trainings.index') }}"
                 class="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">
@@ -46,7 +46,7 @@
                 <h3 class="text-lg sm:text-xl font-bold">Manage Training</h3>
             </a>
 
-            <a href="#"
+            <a href="{{ route('advantages.index') }}"
                 class="bg-indigo-400 hover:bg-indigo-500 text-indigo-900 hover:text-indigo-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">

@@ -32,7 +32,7 @@
         <img src="{{ asset('assets/images/training/training3.png') }}" alt="Training SCADA" class="mb-3" style="height: 140px;">
         <h5 class="fw-bold">Training Scada</h5>
         <p class="text-muted">
-          SCADA is essential for professionals involved in information system management design, especially at the supervisory level.
+          SCADA is essential for professionals involved in information system management design, especially at the supervisory level
         </p>
       </div>
       <div class="col-md-4">
