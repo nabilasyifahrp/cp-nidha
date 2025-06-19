@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Grootech IoT Solution</title>
+    <title>Nidha Cipta Edutama</title>
     @include('layouts.partials.head')
 </head>
 
@@ -15,7 +15,7 @@
         <div id="ht-preloader">
             <div class="loader clear-loader">
                 <span></span>
-                <p class="text-success">Grootech</p>
+                <p class="text-success">Nice</p>
             </div>
         </div>
         <!-- preloader end -->
@@ -29,7 +29,7 @@
         <!--hero section end-->
 
         <!--clients section start-->
-        @include('section.clients')
+        @include('section.training')
         <!--clients section end-->
 
         <!--body content start-->
@@ -93,7 +93,4 @@
     @yield('content')
 
 </body>
-
-
-
 </html>
