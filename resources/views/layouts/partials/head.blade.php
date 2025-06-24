@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>Nidha</title>
+<title>Nidha Cipta Edotama</title>
 
 <!-- Favicon Icon -->
 <link rel="shortcut icon" href="assets/images/logo_perusahaan/nice.png" />

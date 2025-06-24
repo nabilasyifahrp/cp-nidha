@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Grootech IoT Solution</title>
+    <title>Nidha Cipta Edotama</title>
     @include('layouts.partials.head')
 </head>
 
@@ -15,7 +15,7 @@
         <div id="ht-preloader">
             <div class="loader clear-loader">
                 <span></span>
-                <p class="text-success">Grootech</p>
+                <p class="text-success">Nice</p>
             </div>
         </div>
         <!-- preloader end -->
@@ -28,9 +28,9 @@
         @include('section.hero')
         <!--hero section end-->
 
-        <!--clients section start-->
-        @include('section.clients')
-        <!--clients section end-->
+        <!--training section start-->
+        @include('section.training')
+        <!--training section end-->
 
         <!--body content start-->
         <div class="page-content">
@@ -49,16 +49,9 @@
 
             <!--about start-->
 
-            @include('section.about')
+            @include('section.man-power')
 
             <!--about end-->
-
-            <!--counter start-->
-
-            @include('section.counter')
-
-            <!--counter end-->
-
 
             <!--team start-->
 
@@ -68,7 +61,7 @@
 
             <!--blog start-->
 
-            @include('section.contact')
+            @include('section.partner')
 
             <!--blog end-->
 
@@ -93,7 +86,4 @@
     @yield('content')
 
 </body>
-
-
-
 </html>
