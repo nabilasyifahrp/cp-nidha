@@ -1,4 +1,4 @@
-<section id="portfolio">
+{{-- <section id="portfolio">
     <div class="container">
         <div class="row align-items-center text-center text-lg-start mb-5">
             <div class="col-lg-6 mb-4 mb-lg-0 text-center">
@@ -83,4 +83,4 @@
     }
 
     window.onload = typeWriter;
-</script>
+</script> --}}
