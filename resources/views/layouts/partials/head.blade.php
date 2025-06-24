@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Title -->
-<title>Grootech IoT Solution</title>
+<title>Nidha</title>
 
 <!-- Favicon Icon -->
-<link rel="shortcut icon" href="assets/images/about/grootech.png" />
+<link rel="shortcut icon" href="assets/images/logo_perusahaan/nice.png" />
 
 <!-- inject css start -->
 
@@ -39,5 +39,8 @@
 
 <!--== theme.min -->
 <link href="assets/css/theme.min.css" rel="stylesheet" />
+
+<!--== Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <!-- inject css end -->

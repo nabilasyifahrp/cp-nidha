@@ -20,9 +20,10 @@ use App\Http\Controllers\TrainingController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('layouts.app');
-//});
+Route::get('/training-center', function () {
+   return view('layouts.app-training');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

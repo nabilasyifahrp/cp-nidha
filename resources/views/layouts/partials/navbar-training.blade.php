@@ -1,80 +1,79 @@
-<header class="site-header bg-white shadow-lg sticky-top rounded-b-[48px] px-4 ">
-    <div id="header-wrap">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="assets/images/logo_perusahaan/nice.png" width="65" height="65" alt="Nice Logo">
-                </a>
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+<header class="bg-white shadow-md sticky top-0 z-50 px-4 md:rounded-b-[48px]">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4">
+        <a href="/" class="flex items-center">
+            <img src="{{ asset('assets/images/logo_perusahaan/nice.png') }}" alt="Nice Logo" class="w-16 h-16">
+        </a>
+
+        <nav class="hidden md:flex space-x-6 items-center relative">
+            <a href="#" class="text-gray-800 font-semibold hover:text-orange-500 transition">Home</a>
+            <a href="#" class="text-gray-800 font-semibold hover:text-orange-500 transition">Training</a>
+            <a href="#" class="text-gray-800 font-semibold hover:text-orange-500 transition">Trainer</a>
+
+            <div class="relative group">
+                <button class="text-gray-800 font-semibold hover:text-orange-500 transition flex items-center">
+                    About Us
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
                 </button>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center gap-lg-3 me-lg-3">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fw-bold nav-hover" href="#">Home</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark fw-bold nav-hover" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                About Us
-                            </a>
-                            <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item nav-hover" href="#training">Training Center</a></li>
-                                <li><a class="dropdown-item nav-hover" href="#manpower">Man Power Supply</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fw-bold nav-hover" href="#services">Blog</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#team" class="btn fw-bold px-4 py-2 contact-btn rounded-pill ms-lg-2 mt-2 mt-lg-0">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
+                <div class="absolute left-0 mt-2 w-52 bg-white rounded-md shadow-lg hidden group-hover:block z-50">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-orange-100" style="font-family: 'Inter', sans-serif;">Training Center</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-orange-100" style="font-family: 'Inter', sans-serif;">Man Power Supply</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-orange-100" style="font-family: 'Inter', sans-serif;">Internet of Things</a>
                 </div>
-            </nav>
+            </div>
+
+            <a href="#" class="border-2 border-orange-400 text-orange-400 px-5 py-2 rounded-full font-semibold hover:bg-orange-400 hover:text-white transition">
+                Contact Us
+            </a>
+        </nav>
+
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+        <a href="#" class="block py-2 text-gray-800 font-semibold hover:text-orange-500">Home</a>
+        <a href="#" class="block py-2 text-gray-800 font-semibold hover:text-orange-500">Training</a>
+        <a href="#" class="block py-2 text-gray-800 font-semibold hover:text-orange-500">Trainer</a>
+
+        <div class="pt-2">
+            <button id="about-toggle" class="w-full text-left py-2 text-gray-800 font-semibold hover:text-orange-500 flex justify-between items-center">
+                About Us
+                <svg class="w-4 h-4 ml-2 transition-transform" id="about-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="about-submenu" class="ml-4 space-y-1 mt-1 hidden">
+                <a href="#" class="block text-gray-800 hover:text-orange-500" style="font-family: 'Inter', sans-serif;">Training Center</a>
+                <a href="#" class="block text-gray-800 hover:text-orange-500" style="font-family: 'Inter', sans-serif;">Man Power Supply</a>
+                <a href="#" class="block text-gray-800 hover:text-orange-500" style="font-family: 'Inter', sans-serif;">Internet of Things</a>
+            </div>
+        </div>
+
+        <a href="#" class="block mt-2 border-2 border-orange-400 text-orange-400 px-5 py-2 rounded-full font-semibold hover:bg-orange-400 hover:text-white transition">
+            Contact Us
+        </a>
     </div>
 </header>
 
-<style>
-    .nav-hover:hover {
-        color: #f69433 !important;
-        background-color: transparent;
-    }
-    .dropdown-menu .nav-hover:hover {
-        background-color: #f69433;
-        color: #000;
-    }
-    .contact-btn {
-        color: #f69433;
-        border: 2px solid #f69433;
-        background-color: transparent;
-    }
-    .contact-btn:hover {
-        background-color: #f69433;
-        color: white;
-    }
-</style>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        const navbarCollapse = document.getElementById('navbarNav');
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
 
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
-                bsCollapse.hide();
-            });
-        });
+    document.getElementById('about-toggle').addEventListener('click', function() {
+        const submenu = document.getElementById('about-submenu');
+        const icon = document.getElementById('about-icon');
+        submenu.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
     });
 </script>

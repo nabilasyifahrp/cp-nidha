@@ -2,38 +2,63 @@
 <html lang="en">
 
 <head>
-    <title>Training Center Nidha</title>
+    <title>Nidha Training Center</title>
     @include('layouts.partials.head')
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
-    <div class="page-wrapper">
+    <!-- page wrapper start -->
+    <div class="page-wrapper min-h-screen">
 
-        {{-- Preloader (optional) --}}
+        <!-- preloader start -->
         <div id="ht-preloader">
             <div class="loader clear-loader">
                 <span></span>
-                <p class="text-success">Nidha</p>
+                <p class="text-success">Nice</p>
             </div>
         </div>
+        <!-- preloader end -->
 
-        {{-- Navbar khusus halaman training --}}
+        <!--header start-->
         @include('layouts.partials.navbar-training')
+        <!--header end-->
 
-        {{-- Langsung panggil section-section di sini --}}
-        @include('cp-nidha.section.hero')
-        @include('cp-nidha.section.training')
-        @include('cp-nidha.section.trainer')
-        @include('cp-nidha.section.contact')
-        @include('cp-nidha.section.footer')
+        <!--hero section start-->
+        @include('training-center.section.hero')
+        <!--hero section end-->
+
+        <!--vision mission section start-->
+        @include('training-center.section.vision-mission')
+        <!--vision mission section end-->
+
+        <!--training section start-->
+        @include('training-center.section.training')
+        <!--training section end-->
+
+        <!--trainer section start-->
+        @include('training-center.section.trainer')
+        <!--trainer section end-->
+
+        <!--contact section start-->
+        @include('training-center.section.contact')
+        <!--contact section end-->
+
+        <!--footer section start-->
+        @include('training-center.section.footer')
+        <!--footer section end-->
 
     </div>
+    <!-- page wrapper end -->
 
-    {{-- Back to Top --}}
-    <div class="scroll-top"><a class="smoothscroll bg-success" href="#top"><i class="las la-angle-up"></i></a></div>
+    <!--back-to-top start-->
+    {{-- <div class="scroll-top"><a class="smoothscroll bg-success" href="#top"><i class="las la-angle-up"></i></a></div> --}}
+    <!--back-to-top end-->
 
+    <!-- inject js start -->
     @include('layouts.partials.foot')
+    <!-- inject js end -->
 
 </body>
+
 </html>
