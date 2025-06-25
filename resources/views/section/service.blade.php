@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     @media (max-width: 576px) {
         .grootech-team-filter-wrapper {
             overflow-x: auto;
@@ -117,4 +117,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
