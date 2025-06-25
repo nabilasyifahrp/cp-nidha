@@ -45,16 +45,12 @@
                                 About Us
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item nav-hover" href="#training">Training Center</a></li>
+                                <li><a class="dropdown-item nav-hover" href="{{ route('training.center') }}">Training Center</a></li>
                                 <li><a class="dropdown-item nav-hover" href="#manpower">Man Power Supply</a></li>
-                                <li><a class="dropdown-item nav-hover" href="#manpower">Internet of Things</a></li>
+                                <li><a class="dropdown-item nav-hover" href="{{ route('iot') }}">Internet of Things</a></li>
                             </ul>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark fw-bold nav-hover" href="#services">Blog</a>
-                        </li>
-
+                        
                         <li class="nav-item">
                             <a href="https://wa.me/6281281109795"
                                 class="btn fw-bold px-4 py-2 contact-btn rounded-pill ms-lg-2 mt-2 mt-lg-0">

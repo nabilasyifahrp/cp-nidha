@@ -21,8 +21,9 @@ use App\Http\Controllers\TrainingController;
 */
 
 Route::get('/training-center', function () {
-   return view('layouts.app-training');
-});
+    return view('layouts.app-training');
+})->name('training.center');
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -32,25 +33,25 @@ Route::get('/', [LandingPageController::class, 'index']);
 
 // Route::post('/grootech/appointment/send', [AppointmentController::class, 'send'])->name('grootech.appointment.send');
 
-Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
-Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
+// Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
+// Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 
-Route::post('/contacts/store-multiple', [ContactController::class, 'storeMultiple'])->name('contacts.storeMultiple');
+// Route::post('/contacts/store-multiple', [ContactController::class, 'storeMultiple'])->name('contacts.storeMultiple');
 
-Route::get('contacts/edit/{id}', [ContactController::class, 'edit'])->name('contacts.edit');
-Route::put('contacts/update/{id}', [ContactController::class, 'update'])->name('contacts.update');
+// Route::get('contacts/edit/{id}', [ContactController::class, 'edit'])->name('contacts.edit');
+// Route::put('contacts/update/{id}', [ContactController::class, 'update'])->name('contacts.update');
 
-Route::put('/contacts/{id}', [ContactController::class, 'update'])->name('contacts.update');
+// Route::put('/contacts/{id}', [ContactController::class, 'update'])->name('contacts.update');
 
-Route::post('/update-contact', [ContactController::class, 'update']);
+// Route::post('/update-contact', [ContactController::class, 'update']);
 
-Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
+// Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
-Route::post('/contacts/update', [ContactController::class, 'update'])->name('contacts.update');
+// Route::post('/contacts/update', [ContactController::class, 'update'])->name('contacts.update');
 
 
-//Appointment Request
-Route::post('/appointment-request', [AppointmentRequestController::class, 'store'])->name('appointment.request.store');
+// //Appointment Request
+// Route::post('/appointment-request', [AppointmentRequestController::class, 'store'])->name('appointment.request.store');
 
 //Autentikasi
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
@@ -80,3 +81,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/advantages/{id}', [AdvantageController::class, 'destroy'])->name('advantages.destroy');
     Route::get('/advantages/{id}', [AdvantageController::class, 'read'])->name('advantages.read');
 });
+
+Route::get('/iot', function () {
+   return view('layouts.app-iot');
+})->name('iot');

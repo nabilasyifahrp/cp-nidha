@@ -12,9 +12,9 @@
                 <h5 class="fw-bold mb-4" style="color: #7c3f1d;">About Us</h5>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
-                        <a href="#" class="text-decoration-none d-block" style="color: #fff;"
+                        <a href="{{ route('training.center') }}" class="text-decoration-none d-block" style="color: #fff;"
                             onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#fff'">
-                            Nidha Training Center
+                            Training Center
                         </a>
                     </li>
                     <li class="mb-2">
@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="text-decoration-none d-block" style="color: #fff;"
+                        <a href="{{ route('iot') }}" class="text-decoration-none d-block" style="color: #fff;"
                             onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#fff'">
                             Internet of Things
                         </a>

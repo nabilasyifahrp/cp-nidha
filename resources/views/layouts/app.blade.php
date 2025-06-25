@@ -15,7 +15,7 @@
         <div id="ht-preloader">
             <div class="loader clear-loader">
                 <span></span>
-                <p class="text-success">Nice</p>
+                <p style="color: #e59000; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nice</p>
             </div>
         </div>
         <!-- preloader end -->
