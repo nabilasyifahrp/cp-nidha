@@ -40,7 +40,4 @@
 <!--== theme.min -->
 <link href="assets/css/theme.min.css" rel="stylesheet" />
 
-<!--== Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-
 <!-- inject css end -->

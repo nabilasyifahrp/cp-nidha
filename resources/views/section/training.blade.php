@@ -21,7 +21,7 @@
                         conducive atmosphere that enhances understanding.
                     </p>
 
-                    <a href="#training" class="btn btn-dark rounded-pill px-4 py-2 transition">Read More</a>
+                    <a href="{{ route('training.center') }}" class="btn btn-dark rounded-pill px-4 py-2 transition">Read More</a>
                 </div>
             </div>
         </div>
