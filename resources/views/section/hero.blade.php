@@ -10,7 +10,7 @@
         color: white;
     }
 </style>
-<section class="position-relative px-2 py-5" style="background: linear-gradient(to right, #ffb624, #ffe493);">
+<section class="position-relative px-2 py-10" style="background: linear-gradient(to right, #ffb624, #ffe493);">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

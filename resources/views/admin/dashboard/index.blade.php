@@ -74,6 +74,15 @@
                 </svg>
                 <h3 class="text-lg sm:text-xl font-bold">Manage Partners</h3>
             </a>
+
+            <a href="{{ route('service.index') }}"
+                class="bg-purple-400 hover:bg-purple-500 text-purple-900 hover:text-purple-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path d="M9 2a1 1 0 0 0-1 1v1H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V3a1 1 0 0 0-1-1H9Zm1 2h4v1h-4V4Zm-1 6h6v2H9v-2Zm0 4h4v2H9v-2Z"/>
+                </svg>
+                <h3 class="text-lg sm:text-xl font-bold">Manage Service</h3>
+            </a>
         </div>
     </main>
 </body>

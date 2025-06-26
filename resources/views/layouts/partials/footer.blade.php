@@ -12,8 +12,9 @@
                 <h5 class="fw-bold mb-4" style="color: #7c3f1d;">About Us</h5>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
-                        <a href="{{ route('training.center') }}" class="text-decoration-none d-block" style="color: #fff;"
-                            onmouseover="this.style.color='#000000'" onmouseout="this.style.color='#fff'">
+                        <a href="{{ route('training.center') }}" class="text-decoration-none d-block"
+                            style="color: #fff;" onmouseover="this.style.color='#000000'"
+                            onmouseout="this.style.color='#fff'">
                             Training Center
                         </a>
                     </li>
@@ -45,56 +46,54 @@
 
             <div class="col-md-3">
                 <h5 class="fw-bold mb-4" style="color: #7c3f1d;">Contact Us</h5>
-                <div class="row g-3 text-white">
+                <div class="row g-3 text-dark">
+
                     <div class="col-6 text-center">
                         <div class="d-block text-dark" style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)'; this.style.color='#ff9800';"
-                            onmouseout="this.style.transform='scale(1)'; this.style.color='#7c3f1d';">
-                            <img src="{{ asset('assets/images/footer/01.png') }}" alt="Phone"
-                                style="width: 32px; height: 32px;" />
-                            <p class="mt-2 mb-0 text-dark" style="font-size: 14px;">Phone</p>
-                            <p class="mb-0 text-dark" style="font-size: 13px;">+62 21 8263 5877</p>
+                            onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+                            <i class="bi bi-telephone-fill" style="font-size: 32px;"></i>
+                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Phone</p>
+                            <p class="mb-0 small text-dark">+62 21 8263 5877</p>
                         </div>
                     </div>
 
                     <div class="col-6 text-center">
                         <a href="https://wa.me/6281211156779" class="text-decoration-none d-block text-dark"
                             style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)'; this.style.color='#ff9800';"
-                            onmouseout="this.style.transform='scale(1)'; this.style.color='#7c3f1d';">
-                            <img src="{{ asset('assets/images/footer/02.png') }}" alt="Mobile"
-                                style="width: 32px; height: 32px;" />
-                            <p class="mt-2 mb-0 text-dark" style="font-size: 14px;">Mobile</p>
-                            <p class="mb-0 text-dark" style="font-size: 13px;">+62 812-111-56779</p>
+                            onmouseover="this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <i class="bi bi-phone-fill" style="font-size: 32px;"></i>
+                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Mobile</p>
+                            <p class="mb-0 small text-dark">+62 812-111-56779</p>
                         </a>
                     </div>
 
                     <div class="col-6 text-center">
                         <a href="https://wa.me/6281281109795" class="text-decoration-none d-block text-dark"
                             style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)'; this.style.color='#ff9800';"
-                            onmouseout="this.style.transform='scale(1)'; this.style.color='#7c3f1d';">
-                            <img src="{{ asset('assets/images/footer/03.png') }}" alt="Wa Only"
-                                style="width: 32px; height: 32px;" />
-                            <p class="mt-2 mb-0 text-dark" style="font-size: 14px;">Wa Only</p>
-                            <p class="mb-0 text-dark" style="font-size: 13px;">+62 812-8110-9795</p>
+                            onmouseover="this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <i class="bi bi-whatsapp" style="font-size: 32px;"></i>
+                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Wa Only</p>
+                            <p class="mb-0 small text-dark">+62 812-8110-9795</p>
                         </a>
                     </div>
 
                     <div class="col-6 text-center">
                         <a href="mailto:info@nidhacenter.com" class="text-decoration-none d-block text-dark"
                             style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)'; this.style.color='#ff9800';"
-                            onmouseout="this.style.transform='scale(1)'; this.style.color='#7c3f1d';">
-                            <img src="{{ asset('assets/images/footer/04.png') }}" alt="Email"
-                                style="width: 32px; height: 32px;" />
-                            <p class="mt-2 mb-0 text-dark" style="font-size: 14px;">Email</p>
-                            <p class="mb-0 text-dark" style="font-size: 13px;">info@nidhacenter.com</p>
+                            onmouseover="this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.transform='scale(1)';">
+                            <i class="bi bi-envelope-fill" style="font-size: 32px;"></i>
+                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Email</p>
+                            <p class="mb-0 small text-dark">info@nidhacenter.com</p>
                         </a>
                     </div>
+                    
                 </div>
             </div>
-            <p lass="text-center mt-5 pt-4 border-top" style="color: #7c3f1d;">© 2020 PT. Nidha Cipta Edutama</p>
+
+            <p lass="text-center mt-5 pt-4 border-top" style="color: #7c3f1d;">© 2020 PT. Nidha Cipta Edotama</p>
         </div>
     </div>
 </footer>

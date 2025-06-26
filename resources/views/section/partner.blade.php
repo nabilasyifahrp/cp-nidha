@@ -1,4 +1,4 @@
-<section id="team" class="pt-5 pb-5" style="background: white;">
+<section id="team" class="py-10" style="background: white;">
   <div class="container">
     <div class="text-center mb-4">
       <h2 class="fw-bold text-dark">Our Partners</h2>

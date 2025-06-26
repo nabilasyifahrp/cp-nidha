@@ -35,18 +35,6 @@
         <!--body content start-->
         <div class="page-content">
 
-            <!--services start-->
-
-            @include('section.service')
-
-            <!--services end-->
-
-            <!--portfolio start-->
-
-            @include('section.portfolio')
-
-            <!--portfolio end-->
-
             <!--about start-->
 
             @include('section.man-power')
@@ -76,7 +64,7 @@
     <!-- page wrapper end -->
 
     <!--back-to-top start-->
-    <div class="scroll-top"><a class="smoothscroll bg-success" href="#top"><i class="las la-angle-up"></i></a></div>
+    <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
     <!--back-to-top end-->
 
     <!-- inject js start -->
