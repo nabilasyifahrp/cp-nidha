@@ -11,17 +11,8 @@
     <!-- page wrapper start -->
     <div class="page-wrapper min-h-screen">
 
-        <!-- preloader start -->
-        <div id="ht-preloader">
-            <div class="loader clear-loader">
-                <span></span>
-                <p class="text-success">Nice</p>
-            </div>
-        </div>
-        <!-- preloader end -->
-
         <!--header start-->
-        @include('layouts.partials.navbar-training')
+        @include('layouts.partials.navbar')
         <!--header end-->
 
         <!--hero section start-->
@@ -40,12 +31,8 @@
         @include('training-center.section.trainer')
         <!--trainer section end-->
 
-        <!--contact section start-->
-        @include('training-center.section.contact')
-        <!--contact section end-->
-
         <!--footer section start-->
-        @include('training-center.section.footer')
+        @include('layouts.partials.footer')
         <!--footer section end-->
 
     </div>
