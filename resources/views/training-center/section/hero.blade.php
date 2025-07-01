@@ -22,7 +22,7 @@
                         The Best Education Investment <br> For Your Success
                     </h4>
                     <div class="text-center">
-                        <img src="{{ asset('assets/images/hero/10.png') }}"
+                        <img src="{{ asset('assets/images/hero/01.png') }}"
                             alt="Box Illustration"
                             class="img-fluid" style="max-height: 250px;">
                     </div>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-lg-6 text-center">
-                <img src="{{ asset('assets/images/hero/09.png') }}"
+                <img src="{{ asset('assets/images/hero/02.png') }}"
                     alt="Team Illustration"
                     class="img-fluid" style="max-height: 500px;">
             </div>
