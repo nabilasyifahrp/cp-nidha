@@ -1,42 +1,38 @@
-<section class="py-16 bg-white text-gray-800 font-[Poppins]">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-[#8B4513] mb-2">
+<style>
+    .rounded-5 {
+        border-radius: 2rem;
+    }
+</style>
+
+<section class="py-5 bg-white text-dark" style="font-family: 'Poppins', sans-serif;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold mb-2" style="color: #b4551a; font-size: 2.5rem;">
                 Nidha Training Center
             </h1>
-            <p class="text-sm md:text-base text-gray-500">
-                Discover more about Nidha Training Center
-            </p>
+            <h5 class="fw-semibold" style="color: #822000;">
+                About Nidha Training Center?
+            </h5>
         </div>
 
-        <h2 class="text-center text-xl sm:text-2xl md:text-3xl font-bold text-[#D2691E] mb-8">
-            The Best Educational Investment for Your Success
-        </h2>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <div class="col-span-2 sm:col-span-1 sm:row-span-2 h-48 sm:h-80 md:h-[400px] overflow-hidden rounded-xl">
-                <img src="{{ asset('assets/images/hero/09.png') }}" alt="Training 1"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="p-4 rounded-5 shadow-lg border" style="background-color: #fff;">
+                    <h4 class="text-center fw-bold mb-3" style="color: #822000;">
+                        The Best Education Investment <br> For Your Success
+                    </h4>
+                    <div class="text-center">
+                        <img src="{{ asset('assets/images/hero/01.png') }}"
+                            alt="Box Illustration"
+                            class="img-fluid" style="max-height: 250px;">
+                    </div>
+                </div>
             </div>
 
-            <div class="h-40 sm:h-48 overflow-hidden rounded-xl">
-                <img src="{{ asset('assets/images/hero/10.png') }}" alt="Training 2"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
-            </div>
-
-            <div class="h-40 sm:h-48 overflow-hidden rounded-xl">
-                <img src="{{ asset('assets/images/hero/11.png') }}" alt="Training 3"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
-            </div>
-
-            <div class="h-40 sm:h-48 overflow-hidden rounded-xl">
-                <img src="{{ asset('assets/images/hero/12.png') }}" alt="Training 4"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
-            </div>
-
-            <div class="h-40 sm:h-48 overflow-hidden rounded-xl">
-                <img src="{{ asset('assets/images/hero/13.png') }}" alt="Training 5"
-                    class="w-full h-full object-cover hover:scale-105 transition duration-300 ease-in-out">
+            <div class="col-lg-6 text-center">
+                <img src="{{ asset('assets/images/hero/02.png') }}"
+                    alt="Team Illustration"
+                    class="img-fluid" style="max-height: 500px;">
             </div>
         </div>
     </div>
