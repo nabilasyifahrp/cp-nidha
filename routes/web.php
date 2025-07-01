@@ -2,12 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdvantageController;
-use App\Http\Controllers\AppointmentRequestController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\IotPageController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\TrainingController;
@@ -22,10 +19,6 @@ use App\Http\Controllers\TrainingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/iot', function () {
-   return view('layouts.app-iot');
-})->name('iot');
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -72,5 +65,4 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
-
 Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
