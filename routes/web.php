@@ -2,11 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdvantageController;
-use App\Http\Controllers\AppointmentRequestController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TrainingController;
 
@@ -25,9 +23,6 @@ Route::get('/training-center', function () {
     return view('layouts.app-training');
 })->name('training.center');
 
-Route::get('/iot', function () {
-   return view('layouts.app-iot');
-})->name('iot');
 
 // Route::get('/', function () {
 //     return view('welcome');
