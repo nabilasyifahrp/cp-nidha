@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\TrainingController;
 
 /*
@@ -20,10 +21,6 @@ use App\Http\Controllers\TrainingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/training-center', function () {
-    return view('layouts.app-training');
-})->name('training.center');
 
 Route::get('/iot', function () {
    return view('layouts.app-iot');
@@ -72,3 +69,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
     Route::get('/service/{id}', [ServiceController::class, 'read'])->name('service.read');
 });
+
+Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');

@@ -21,31 +21,18 @@
         </p>
 
         <div class="row justify-content-center">
+            @foreach ($trainings as $training)
             <div class="col-md-4 mb-4">
                 <div class="training-card p-4 rounded-5 shadow-lg border border-light-subtle h-100"
                     style="background-color: #fef9f6;">
-                    <img src="{{ asset('assets/images/bg/01.jpg') }}" class="img-fluid mb-3"
-                        style="max-height: 130px;" alt="Training Image">
-                    <h5 class="fw-bold mb-2" style="color: #8B4513;">Training Teknisi PLC</h5>
-                    <p style="text-align: justify;">
-                        The heart of a modern automation system, an engineer absolutely must know it to ensure the continuity of the production process.
-                    </p>
+                    <img src="{{ asset('storage/' . $training->image) }}" class="img-fluid mb-3"
+                        style="max-height: 130px;" alt="{{ $training->title }}">
+                    <h5 class="fw-bold mb-2" style="color: #8B4513;">{{ $training->title }}</h5>
+                    <p style="text-align: justify;">{{ $training->description }}</p>
                 </div>
             </div>
-
-
-            <div class="col-md-4 mb-4">
-                <div class="training-card p-4 rounded-5 shadow-lg border border-light-subtle h-100"
-                    style="background-color: #fef9f6;">
-                    <img src="{{ asset('assets/images/bg/01.jpg') }}" class="img-fluid mb-3"
-                        style="max-height: 130px;" alt="Training Image">
-                    <h5 class="fw-bold mb-2" style="color: #8B4513;">Training Teknisi PLC</h5>
-                    <p style="text-align: justify;">
-                        The heart of a modern automation system, an engineer absolutely must know it to ensure the continuity of the production process.
-                    </p>
-                </div>
-            </div>
-
+            @endforeach
         </div>
+
     </div>
 </section>
