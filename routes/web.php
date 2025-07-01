@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdvantageController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\IotPageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ServiceController;
