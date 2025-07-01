@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IotPageController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\TrainingController;
@@ -71,3 +72,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
+
+Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
