@@ -64,6 +64,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/service/{id}', [ServiceController::class, 'read'])->name('service.read');
 });
 
-
 Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
-
+Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
