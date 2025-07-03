@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Nidha Cipta Edotama</title>
+    <title>Nidha Training Center</title>
     @include('layouts.partials.head')
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
     <!-- page wrapper start -->
-    <div class="page-wrapper">
+    <div class="page-wrapper min-h-screen">
 
         <!-- preloader start -->
         <div id="ht-preloader">
@@ -25,53 +25,36 @@
         <!--header end-->
 
         <!--hero section start-->
-        @include('section.hero')
+        @include('training-center.section.hero')
         <!--hero section end-->
 
+        <!--vision mission section start-->
+        @include('training-center.section.vision-mission')
+        <!--vision mission section end-->
+
         <!--training section start-->
-        @include('section.training')
+        @include('training-center.section.training')
         <!--training section end-->
 
-        <!--body content start-->
-        <div class="page-content">
+        <!--trainer section start-->
+        @include('training-center.section.trainer')
+        <!--trainer section end-->
 
-            <!--about start-->
-
-            @include('section.man-power')
-
-            <!--about end-->
-
-            <!--team start-->
-
-            @include('section.team')
-
-            <!--team end-->
-
-            <!--blog start-->
-
-            @include('section.partner')
-
-            <!--blog end-->
-
-        </div>
-        <!--body content end-->
-
-        <!--footer start-->
+        <!--footer section start-->
         @include('layouts.partials.footer')
-        <!--footer end-->
-        
+        <!--footer section end-->
+
     </div>
     <!-- page wrapper end -->
 
     <!--back-to-top start-->
     <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
-    <!--back-to-top end--> 
+    <!--back-to-top end-->
 
     <!-- inject js start -->
     @include('layouts.partials.foot')
     <!-- inject js end -->
 
-    @yield('content')
-
 </body>
+
 </html>

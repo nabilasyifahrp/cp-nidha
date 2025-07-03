@@ -49,32 +49,12 @@
                 <div class="row g-3 text-dark">
 
                     <div class="col-6 text-center">
-                        <div class="d-block text-dark" style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
-                            <i class="bi bi-telephone-fill" style="font-size: 32px;"></i>
-                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Phone</p>
-                            <p class="mb-0 small text-dark">+62 21 8263 5877</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 text-center">
                         <a href="https://wa.me/6281211156779" class="text-decoration-none d-block text-dark"
                             style="transition: all 0.3s ease; display: inline-block;"
                             onmouseover="this.style.transform='scale(1.1)';"
                             onmouseout="this.style.transform='scale(1)';">
-                            <i class="bi bi-phone-fill" style="font-size: 32px;"></i>
+                            <i class="bi bi-telephone-fill" style="font-size: 32px;"></i>
                             <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Mobile</p>
-                            <p class="mb-0 small text-dark">+62 812-111-56779</p>
-                        </a>
-                    </div>
-
-                    <div class="col-6 text-center">
-                        <a href="https://wa.me/6281281109795" class="text-decoration-none d-block text-dark"
-                            style="transition: all 0.3s ease; display: inline-block;"
-                            onmouseover="this.style.transform='scale(1.1)';"
-                            onmouseout="this.style.transform='scale(1)';">
-                            <i class="bi bi-whatsapp" style="font-size: 32px;"></i>
-                            <p class="mb-0 fw-semibold mt-2 text-dark" style="font-size: 14px;">Wa Only</p>
                             <p class="mb-0 small text-dark">+62 812-8110-9795</p>
                         </a>
                     </div>
@@ -89,7 +69,7 @@
                             <p class="mb-0 small text-dark">info@nidhacenter.com</p>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
 

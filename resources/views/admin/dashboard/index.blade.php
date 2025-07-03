@@ -36,7 +36,7 @@
     <main class="container mx-auto px-4 sm:px-6 py-10 text-center">
         <h1 class="text-3xl sm:text-4xl font-extrabold mb-10 text-yellow-900">Dashboard Admin</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <a href="#"
+            <a href="{{ route('trainings.index') }}"
                 class="bg-yellow-400 hover:bg-yellow-500 text-yellow-900 hover:text-yellow-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">
@@ -46,7 +46,7 @@
                 <h3 class="text-lg sm:text-xl font-bold">Manage Training</h3>
             </a>
 
-            <a href="#"
+            <a href="{{ route('advantages.index') }}"
                 class="bg-indigo-400 hover:bg-indigo-500 text-indigo-900 hover:text-indigo-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">
@@ -74,9 +74,17 @@
                 </svg>
                 <h3 class="text-lg sm:text-xl font-bold">Manage Partners</h3>
             </a>
+
+            <a href="{{ route('service.index') }}"
+                class="bg-purple-400 hover:bg-purple-500 text-purple-900 hover:text-purple-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path d="M9 2a1 1 0 0 0-1 1v1H7a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V3a1 1 0 0 0-1-1H9Zm1 2h4v1h-4V4Zm-1 6h6v2H9v-2Zm0 4h4v2H9v-2Z"/>
+                </svg>
+                <h3 class="text-lg sm:text-xl font-bold">Manage Service</h3>
+            </a>
         </div>
     </main>
 </body>
+
 </html>
-
-
