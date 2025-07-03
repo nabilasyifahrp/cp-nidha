@@ -14,6 +14,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TrainingController;
 use App\Models\Advantage;
+use App\Http\Controllers\PartnerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -128,4 +130,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/advantages/update/{id}', [AdvantageController::class, 'update'])->name('advantages.update');
     Route::delete('/advantages/{id}', [AdvantageController::class, 'destroy'])->name('advantages.destroy');
     Route::get('/advantages/{id}', [AdvantageController::class, 'read'])->name('advantages.read');
+
+    // PARTNERS
+    Route::resource('/partners', PartnerController::class);
 });

@@ -55,8 +55,9 @@
                 <h3 class="text-lg sm:text-xl font-bold">Manage Advantages</h3>
             </a>
 
-            <a href="#"
-                class="bg-orange-400 hover:bg-orange-500 text-orange-900 hover:text-orange-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+            <a href="{{ url('/team') }}"
+    class="bg-orange-400 hover:bg-orange-500 text-orange-900 hover:text-orange-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
@@ -65,8 +66,9 @@
                 <h3 class="text-lg sm:text-xl font-bold">Manage Teams</h3>
             </a>
 
-            <a href="#"
-                class="bg-red-400 hover:bg-red-500 text-red-900 hover:text-red-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+            <a href="{{ url('/partners') }}"
+    class="bg-red-400 hover:bg-red-500 text-red-900 hover:text-red-100 rounded-xl shadow-lg p-8 sm:p-10 flex flex-col items-center gap-4 transform hover:scale-105 transition duration-300">
+
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-20 sm:h-20" viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
