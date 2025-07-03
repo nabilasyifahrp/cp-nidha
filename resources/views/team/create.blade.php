@@ -1,24 +1,23 @@
-{{-- resources/views/team/create.blade.php --}}
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container">
-    <h2>Tambah Team</h2>
-    <form action="{{ route('team.store') }}" method="POST" enctype="multipart/form-data">
+<div class="container mt-4">
+    <h4>Add Team Members</h4>
+    <form action="{{ route('team.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label>Nama</label>
-            <input type="text" name="name" class="form-control" required placeholder="Contoh: Ratna">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Posisi</label>
-            <input type="text" name="position" class="form-control" required placeholder="Contoh: UI Designer">
+            <label>Position</label>
+            <input type="text" name="position" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Foto</label>
-            <input type="file" name="image" class="form-control" required>
+            <label>Expertise</label>
+            <textarea name="expertise" class="form-control" required></textarea>
         </div>
-        <button class="btn btn-primary">Simpan</button>
+        <button class="btn btn-success">Save</button>
     </form>
 </div>
 @endsection

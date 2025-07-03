@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 namespace App\Http\Controllers;
 
 use App\Models\Team;
@@ -7,54 +6,53 @@ use Illuminate\Http\Request;
 
 class TeamController extends Controller
 {
-    public function index(){
-        $teams = Team::latest()->get();
-        return view('admin.teams.index', compact('teams'));
+    public function index()
+    {
+        $teams = Team::all();
+        return view('team.index', compact('teams'));
     }
 
-
-    public function create(){
-        return view('admin.teams.create');
+    public function create()
+    {
+        return view('team.create');
     }
 
-
-    public function store(Request $request){
-        $validate = $request->validate([
-            'name' => 'required|string|max:225',
-            'position' => 'required|string'
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'position' => 'required|string',
+            'expertise' => 'required|string',
         ]);
 
-        Team::create($validate);
-        return redirect()->route('team.index')->with('success', 'Team successfully added.');
+        Team::create($request->all());
+        return redirect()->route('team.index')->with('success', 'Team data added succesfully.');
     }
 
-
-    public function edit($id){
+    public function edit($id)
+    {
         $team = Team::findOrFail($id);
-        return view('admin.teams.edit', compact('team'));
+        return view('team.edit', compact('team'));
     }
 
-
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $team = Team::findOrFail($id);
 
-        $validate = $request->validate([
-            'name' => 'required|string|max:225',
-            'position' => 'required|string'
+        $request->validate([
+            'name' => 'required|string',
+            'position' => 'required|string',
+            'expertise' => 'required|string',
         ]);
 
-        $team->update($validate);
-
-        return redirect()->route('team.edit', $team->id)->with('success', 'Team successfully updated');
-
+        $team->update($request->all());
+        return redirect()->route('team.index')->with('success', 'Data team succesfully updated.');
     }
 
-
-    public function destroy($id){
+    public function destroy($id)
+    {
         $team = Team::findOrFail($id);
-
         $team->delete();
-
-        return redirect()->route('team.index')->with('success', 'The team has been successfully deleted');
+        return redirect()->route('team.index')->with('success', 'Data team has been succesfully deleted.');
     }
 }

@@ -8,26 +8,17 @@ use Illuminate\Support\Facades\Storage;
 
 class TrainingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $trainings = Training::latest()->get();
         return view('admin.trainings.index', compact('trainings'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.trainings.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -47,27 +38,18 @@ class TrainingController extends Controller
         return redirect()->route('trainings.index')->with('success', 'Training added successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function read($id)
     {
         $training = Training::findOrFail($id);
         return view('admin.trainings.detail', compact('training'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit($id)
     {
         $training = Training::findOrFail($id);
         return view('admin.trainings.edit', compact('training'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, $id)
     {
         $training = Training::findOrFail($id);
@@ -96,9 +78,6 @@ class TrainingController extends Controller
         return redirect()->route('trainings.index')->with('success', 'Training updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy($id)
     {
         $training = Training::findOrFail($id);

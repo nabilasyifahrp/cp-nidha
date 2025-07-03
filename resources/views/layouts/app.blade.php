@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Nidha Cipta Edutama</title>
+    <title>Nidha Cipta Edotama</title>
     @include('layouts.partials.head')
 </head>
 
@@ -15,7 +15,7 @@
         <div id="ht-preloader">
             <div class="loader clear-loader">
                 <span></span>
-                <p class="text-success">Nice</p>
+                <p style="color: #e59000; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nice</p>
             </div>
         </div>
         <!-- preloader end -->
@@ -28,37 +28,18 @@
         @include('section.hero')
         <!--hero section end-->
 
-        <!--clients section start-->
+        <!--training section start-->
         @include('section.training')
-        <!--clients section end-->
+        <!--training section end-->
 
         <!--body content start-->
         <div class="page-content">
 
-            <!--services start-->
-
-            @include('section.service')
-
-            <!--services end-->
-
-            <!--portfolio start-->
-
-            @include('section.portfolio')
-
-            <!--portfolio end-->
-
             <!--about start-->
 
-            @include('section.about')
+            @include('section.man-power')
 
             <!--about end-->
-
-            <!--counter start-->
-
-            @include('section.counter')
-
-            <!--counter end-->
-
 
             <!--team start-->
 
@@ -68,7 +49,7 @@
 
             <!--blog start-->
 
-            @include('section.contact')
+            @include('section.partner')
 
             <!--blog end-->
 
@@ -83,7 +64,7 @@
     <!-- page wrapper end -->
 
     <!--back-to-top start-->
-    <div class="scroll-top"><a class="smoothscroll bg-success" href="#top"><i class="las la-angle-up"></i></a></div>
+    <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
     <!--back-to-top end-->
 
     <!-- inject js start -->

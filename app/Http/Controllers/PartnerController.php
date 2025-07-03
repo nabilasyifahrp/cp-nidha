@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use App\Models\Product;
-use App\Models\Testimonial;
-use App\Models\Team;
 
 
 
@@ -16,11 +13,7 @@ class PartnerController extends Controller
     public function index()
     {
         $partners = Partner::all();
-        $products = Product::all();
-        $projects = [];
-        $testimonials = Testimonial::all();
-        $teams = Team::all();
-        return view('partner.index', compact('partners', 'products', 'projects', 'testimonials', 'teams'));
+        return view('partner.index', compact('partners'));
     }
 
     public function create()
@@ -33,9 +26,10 @@ class PartnerController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'logo' => 'nullable|image|mimes:png,jpg,jpeg|max:2048',
+            'description' => 'nullable|string',
         ]);
 
-        $data = $request->only(['name']);
+        $data = $request->only(['name', 'description']);
 
         if ($request->hasFile('logo')) {
             $data['logo'] = $request->file('logo')->store('partners', 'public');
@@ -43,7 +37,7 @@ class PartnerController extends Controller
 
         Partner::create($data);
 
-        return redirect()->route('partners.index')->with('success', 'Partner berhasil ditambahkan.');
+        return redirect()->route('partners.index')->with('success', 'Partner successfully added.');
     }
 
     public function edit(Partner $partner)
@@ -55,10 +49,11 @@ class PartnerController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
             'logo' => 'nullable|image|mimes:png,jpg,jpeg|max:2048',
         ]);
 
-        $data = $request->only(['name']);
+        $data = $request->only(['name', 'description']);
 
         if ($request->hasFile('logo')) {
             if ($partner->logo) {
@@ -69,7 +64,7 @@ class PartnerController extends Controller
 
         $partner->update($data);
 
-        return redirect()->route('partners.index')->with('success', 'Partner berhasil diupdate.');
+        return redirect()->route('partners.index')->with('success', 'Partner updated succesfully.');
     }
 
     public function destroy(Partner $partner)
@@ -78,6 +73,11 @@ class PartnerController extends Controller
             Storage::disk('public')->delete($partner->logo);
         }
         $partner->delete();
-        return redirect()->route('partners.index')->with('success', 'Partner berhasil dihapus.');
+        return redirect()->route('partners.index')->with('success', 'Partner succesfully deleted.');
     }
+    public function show(Partner $partner)
+{
+    return view('partner.show', compact('partner'));
+}
+
 }

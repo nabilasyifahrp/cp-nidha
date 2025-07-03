@@ -1,22 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container">
-    <h2>Edit Partner</h2>
+<div class="container mt-5">
+    <h2 class="mb-4">Edit Partner</h2>
     <form action="{{ route('partners.update', $partner->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
+
         <div class="mb-3">
-            <label>Nama</label>
-            <input type="text" name="name" class="form-control" value="{{ $partner->name }}">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" value="{{ old('name', $partner->name) }}" required>
         </div>
         <div class="mb-3">
-            <label>Logo</label><br>
+            <label for="logo" class="form-label">Logo</label>
             @if($partner->logo)
-                <img src="{{ asset('storage/'.$partner->logo) }}" width="100"><br>
+                <div class="mb-2">
+                    <img src="{{ asset('storage/'.$partner->logo) }}" alt="Logo" style="height: 80px">
+                </div>
             @endif
-            <input type="file" name="logo" class="form-control">
+            <input type="file" name="logo" id="logo" class="form-control">
         </div>
-        <button class="btn btn-primary">Update</button>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="description" class="form-control" rows="4">{{ old('description', $partner->description) }}</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 @endsection
