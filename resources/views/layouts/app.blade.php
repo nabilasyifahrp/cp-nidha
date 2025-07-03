@@ -65,7 +65,7 @@
 
     <!--back-to-top start-->
     <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
-    <!--back-to-top end-->
+    <!--back-to-top end--> 
 
     <!-- inject js start -->
     @include('layouts.partials.foot')

@@ -11,6 +11,15 @@
     <!-- page wrapper start -->
     <div class="page-wrapper min-h-screen">
 
+        <!-- preloader start -->
+        <div id="ht-preloader">
+            <div class="loader clear-loader">
+                <span></span>
+                <p style="color: #e59000; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nice</p>
+            </div>
+        </div>
+        <!-- preloader end -->
+
         <!--header start-->
         @include('layouts.partials.navbar')
         <!--header end-->
@@ -39,7 +48,7 @@
     <!-- page wrapper end -->
 
     <!--back-to-top start-->
-    {{-- <div class="scroll-top"><a class="smoothscroll bg-success" href="#top"><i class="las la-angle-up"></i></a></div> --}}
+    <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
     <!--back-to-top end-->
 
     <!-- inject js start -->
