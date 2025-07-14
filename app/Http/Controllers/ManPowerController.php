@@ -7,11 +7,8 @@ use Illuminate\Http\Request;
 class ManPowerController extends Controller
 {
     public function index()
-    {
-        
-        $advantages = Advantage::all();
-
-        
-        return view('manpower.index', compact('advantages'));
-    }
+{
+    $advantages = Advantage::latest()->take(3)->get(); 
+    return view('layouts.app-manpower', compact('advantages'));
+}
 }
