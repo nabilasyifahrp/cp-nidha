@@ -6,8 +6,6 @@ use App\Models\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-
-
 class PartnerController extends Controller
 {
     public function index()
@@ -57,28 +55,33 @@ class PartnerController extends Controller
         $data = $request->only(['name', 'description']);
 
         if ($request->hasFile('logo')) {
-            if ($partner->logo) {
+            
+            if ($partner->logo && Storage::disk('public')->exists($partner->logo)) {
                 Storage::disk('public')->delete($partner->logo);
             }
+
             $data['logo'] = $request->file('logo')->store('partners', 'public');
         }
 
         $partner->update($data);
 
-        return redirect()->route('partners.index')->with('success', 'Partner updated succesfully.');
+        return redirect()->route('partners.index')->with('success', 'Partner updated successfully.');
     }
 
     public function destroy(Partner $partner)
     {
-        if ($partner->logo) {
+        
+        if ($partner->logo && Storage::disk('public')->exists($partner->logo)) {
             Storage::disk('public')->delete($partner->logo);
         }
-        $partner->delete();
-        return redirect()->route('partners.index')->with('success', 'Partner succesfully deleted.');
-    }
-    public function read(Partner $partner)
-{
-    return view('admin.partner.show', compact('partner'));
-}
 
+        $partner->delete();
+
+        return redirect()->route('partners.index')->with('success', 'Partner successfully deleted.');
+    }
+
+    public function read(Partner $partner)
+    {
+        return view('admin.partner.show', compact('partner'));
+    }
 }

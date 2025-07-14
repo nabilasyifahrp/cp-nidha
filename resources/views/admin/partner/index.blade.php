@@ -28,7 +28,6 @@
                 <tr>
                     <th>Logo</th>
                     <th>Name</th>
-                    <th>Description</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -43,9 +42,6 @@
                         @endif
                     </td>
                     <td class="fw-semibold">{{ $partner->name }}</td>
-                    <td class="text-start" style="max-width: 300px;">
-                        {{ \Illuminate\Support\Str::limit($partner->description, 150) }}
-                    </td>
                     <td>
                         <div class="d-flex gap-2 justify-content-center flex-wrap">
                             <a href="{{ route('partners.read', $partner->id) }}" class="btn btn-info btn-sm text-white">
@@ -54,7 +50,9 @@
                             <a href="{{ route('partners.edit', $partner->id) }}" class="btn btn-warning btn-sm">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
-                            <form action="{{ route('partners.destroy', $partner->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this partner?')">
+
+                            {{-- ✅ Fix di sini: gunakan $partner langsung, jangan $partner->id --}}
+                            <form action="{{ route('partners.destroy', $partner) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this partner?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">
@@ -66,7 +64,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="4" class="text-muted">No partners have been added yet.</td>
+                    <td colspan="3" class="text-muted">No partners have been added yet.</td>
                 </tr>
                 @endforelse
             </tbody>
