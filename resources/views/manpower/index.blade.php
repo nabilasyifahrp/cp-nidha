@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- atau layouts.admin sesuai template kamu --}}
+@extends('layouts.app') atau layouts.admin sesuai template kamu
 
 @section('content')
 <div class="container py-5">
