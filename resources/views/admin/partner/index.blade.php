@@ -48,7 +48,7 @@
                     </td>
                     <td>
                         <div class="d-flex gap-2 justify-content-center flex-wrap">
-                            <a href="{{ route('partners.show', $partner->id) }}" class="btn btn-info btn-sm text-white">
+                            <a href="{{ route('partners.read', $partner->id) }}" class="btn btn-info btn-sm text-white">
                                 <i class="bi bi-info-circle"></i> Detail
                             </a>
                             <a href="{{ route('partners.edit', $partner->id) }}" class="btn btn-warning btn-sm">

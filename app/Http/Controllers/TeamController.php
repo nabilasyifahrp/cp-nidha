@@ -9,12 +9,12 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::all();
-        return view('team.index', compact('teams'));
+        return view('admin.team.index', compact('teams'));
     }
 
     public function create()
     {
-        return view('team.create');
+        return view('admin.team.create');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class TeamController extends Controller
     public function edit($id)
     {
         $team = Team::findOrFail($id);
-        return view('team.edit', compact('team'));
+        return view('admin.team.edit', compact('team'));
     }
 
     public function update(Request $request, $id)

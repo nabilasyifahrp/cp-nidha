@@ -13,12 +13,12 @@ class PartnerController extends Controller
     public function index()
     {
         $partners = Partner::all();
-        return view('partner.index', compact('partners'));
+        return view('admin.partner.index', compact('partners'));
     }
 
     public function create()
     {
-        return view('partner.create');
+        return view('admin.partner.create');
     }
 
     public function store(Request $request)
@@ -40,9 +40,10 @@ class PartnerController extends Controller
         return redirect()->route('partners.index')->with('success', 'Partner successfully added.');
     }
 
-    public function edit(Partner $partner)
+    public function edit($id)
     {
-        return view('partner.edit', compact('partner'));
+        $partner = Partner::findOrFail($id);
+        return view('admin.partner.edit', compact('partner'));
     }
 
     public function update(Request $request, Partner $partner)
@@ -75,9 +76,9 @@ class PartnerController extends Controller
         $partner->delete();
         return redirect()->route('partners.index')->with('success', 'Partner succesfully deleted.');
     }
-    public function show(Partner $partner)
+    public function read(Partner $partner)
 {
-    return view('partner.show', compact('partner'));
+    return view('admin.partner.show', compact('partner'));
 }
 
 }

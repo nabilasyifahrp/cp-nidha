@@ -6,12 +6,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IotPageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ManPowerController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\TrainingController;
-use App\Models\Advantage;
-use App\Http\Controllers\PartnerController;
-
+use App\Models\Partner;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,6 @@ use App\Http\Controllers\PartnerController;
 // });
 
 Route::get('/', [LandingPageController::class, 'index']);
-Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
-
 
 //Autentikasi
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
@@ -60,21 +59,35 @@ Route::middleware('auth')->group(function () {
     Route::delete('/advantages/{id}', [AdvantageController::class, 'destroy'])->name('advantages.destroy');
     Route::get('/advantages/{id}', [AdvantageController::class, 'read'])->name('advantages.read');
 
-    //PARTNERS
-    Route::prefix('admin')->middleware('auth')->group(function () {
-    Route::resource('partners', PartnerController::class);
-    Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
+    // Service
+    Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
+    Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
+    Route::get('/service/edit/{id}', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
+    Route::get('/service/{id}', [ServiceController::class, 'read'])->name('service.read');
 
-    //TEAM 
-    Route::resource('team', \App\Http\Controllers\TeamController::class);
+    // Team
+    Route::get('/team', [TeamController::class, 'index'])->name('team.index');
+    Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
+    Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
+    Route::get('/team/edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
+    Route::put('/team/update/{id}', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+    Route::get('/team/{id}', [TeamController::class, 'read'])->name('team.read');
 
-    //MANPOWER SUPPLY
-    Route::get('/manpower-supply', [App\Http\Controllers\ManPowerController::class, 'index'])->name('manpower.index');
-
-
-    });
-    
-
+    // Partner
+    Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+    Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create');
+    Route::post('/partners/store', [PartnerController::class, 'store'])->name('partners.store');
+    Route::get('/partners/edit/{id}', [PartnerController::class, 'edit'])->name('partners.edit');
+    Route::put('/partners/update/{id}', [PartnerController::class, 'update'])->name('partners.update');
+    Route::delete('/partners/{id}', [PartnerController::class, 'destroy'])->name('partners.destroy');
+    Route::get('/partners/{id}', [PartnerController::class, 'read'])->name('partners.read');
 });
 
+Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
+Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
+Route::get('/manpower-supply', [ManPowerController::class, 'index'])->name('manpower.index');
 
