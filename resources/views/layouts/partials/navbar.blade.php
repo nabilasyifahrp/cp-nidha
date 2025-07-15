@@ -46,7 +46,7 @@
                             </a>
                             <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item nav-hover" href="{{ route('training.center') }}">Training Center</a></li>
-                                <li><a class="dropdown-item nav-hover" href="#manpower">Man Power Supply</a></li>
+                                <li><a class="dropdown-item nav-hover" href="{{ route('manpower.index') }}">Man Power Supply</a></li>
                                 <li><a class="dropdown-item nav-hover" href="{{ route('iot') }}">Internet of Things</a></li>
                             </ul>
                         </li>

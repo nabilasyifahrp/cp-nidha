@@ -36,7 +36,7 @@
                         style="background: rgba(0, 0, 0, 0.4); padding: 2rem;">
                         <div class="ps-5">
                             <h3 class="text-white fw-bold mb-3">Man Power Supply</h3>
-                            <a href="#training" class="btn fw-bold px-4 py-2 contact-btn rounded-pill">
+                            <a href="{{ route('manpower.index') }}" class="btn fw-bold px-4 py-2 contact-btn rounded-pill">
                                 Read More
                             </a>
                         </div>
