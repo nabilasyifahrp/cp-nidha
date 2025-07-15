@@ -13,4 +13,11 @@ class LandingPageController extends Controller
         $adventages = Advantage::latest()->take(3)->get();
         return view('layouts.app', compact('trainings', 'adventages')); 
     }
+
+    public function manpower()
+{
+    $advantages = Advantage::all(); 
+    return view('layouts.app-manpower', compact('advantages'));
+}
+
 }

@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="row text-center g-4">
             @foreach ($trainings as $training)
                 <div class="col-md-4">

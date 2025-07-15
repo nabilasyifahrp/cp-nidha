@@ -6,9 +6,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IotPageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ManPowerController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\TrainingController;
+use App\Models\Partner;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +67,33 @@ Route::middleware('auth')->group(function () {
     Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
     Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
     Route::get('/service/{id}', [ServiceController::class, 'read'])->name('service.read');
-});
 
+    // Team
+    Route::get('/team', [TeamController::class, 'index'])->name('team.index');
+    Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
+    Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
+    Route::get('/team/edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
+    Route::put('/team/update/{id}', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
+    Route::get('/team/{id}', [TeamController::class, 'read'])->name('team.read');
+
+   // Partner 
+Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create');
+Route::post('/partners/store', [PartnerController::class, 'store'])->name('partners.store');
+Route::get('/partners/edit/{partner}', [PartnerController::class, 'edit'])->name('partners.edit'); 
+Route::put('/partners/update/{partner}', [PartnerController::class, 'update'])->name('partners.update'); 
+Route::delete('/partners/{partner}', [PartnerController::class, 'destroy'])->name('partners.destroy');
+Route::get('/partners/{partner}', [PartnerController::class, 'read'])->name('partners.read');
+
+//ManPowerSupply
 Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
 Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
+Route::get('/manpower-supply', [ManPowerController::class, 'index'])->name('manpower.index');
+
+});
+
+
+
+
+
