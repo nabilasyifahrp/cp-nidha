@@ -15,21 +15,21 @@
                         With structured materials and a comfortable training environment, participants can learn in a
                         conducive atmosphere that enhances understanding.
                     </p>
-                    <a href="#training" class="btn btn-dark rounded-pill px-4 py-2 transition">Read More</a>
+                    <a href="{{ route('manpower.index') }}" class="btn btn-dark rounded-pill px-4 py-2 transition">Read More</a>
                 </div>
             </div>
 
             <div class="col-lg-6 text-center">
-                <img src="{{ asset('assets/images/adventage/adventage1.png') }}" class="img-fluid" style="max-width: 100%; height: auto;" />
+                <img src="{{ asset('assets/images/advantage/advantage1.png') }}" class="img-fluid" style="max-width: 100%; height: auto;" />
             </div>
         </div>
 
         <div class="row text-center g-4">
-            @foreach ($adventages as $adventage)
+            @foreach ($advantages as $advantage)
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/adventage/adventage' . (($loop->index % 3) + 2) . '.png') }}"class="mb-3" style="height: 140px;">
-                    <h5 class="fw-bold">{{ $adventage->title }}</h5>
-                    <p class="text-muted">{{ $adventage->description }}</p>
+                    <img src="{{ asset('assets/images/advantage/advantage' . (($loop->index % 3) + 2) . '.png') }}"class="mb-3" style="height: 140px;">
+                    <h5 class="fw-bold">{{ $advantage->title }}</h5>
+                    <p class="text-muted">{{ $advantage->description }}</p>
                 </div>
             @endforeach
         </div>
