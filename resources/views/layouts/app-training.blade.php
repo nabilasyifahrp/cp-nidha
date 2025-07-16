@@ -47,9 +47,11 @@
     </div>
     <!-- page wrapper end -->
 
-    <!--back-to-top start-->
-    <div class="scroll-top"><a class="smoothscroll" style="background-color: #e59000;" href="#top"><i class="las la-angle-up"></i></a></div>
-    <!--back-to-top end-->
+    <a href="https://wa.me/6281281109795"
+        class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center"
+        style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; z-index: 1050;">
+        <i class="bi bi-whatsapp" style="font-size: 28px;"></i>
+    </a>
 
     <!-- inject js start -->
     @include('layouts.partials.foot')
