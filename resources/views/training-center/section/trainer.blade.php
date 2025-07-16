@@ -20,29 +20,19 @@
         </p>
 
         <div class="row justify-content-center">
+            @foreach($teams as $team)
             <div class="col-lg-3 col-md-5 mb-4">
                 <div class="training-card p-4 rounded-5 shadow-lg border border-light-subtle h-100 mx-auto"
                     style="background-color: #fef9f6; max-width: 280px;">
                     <img src="{{ asset('assets/images/team/01.png') }}" class="img-fluid mb-3"
                         style="max-height: 180px; object-fit: contain;" alt="Trainer Image">
-                    <h5 class="fw-bold mb-2 text-center" style="color: #864f2e;">Didi Tri Wibowo</h5>
+                    <h5 class="fw-bold mb-2 text-center" style="color: #864f2e;">{{ $team->name }}</h5>
                     <p class="text-center" style="font-size: 0.95rem;">
-                        Expertise: Programming, Upgrade & Modification, IO Test & Commissioning
+                        Expertise: {{ $team->expertise}}
                     </p>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-5 mb-4">
-                <div class="training-card p-4 rounded-5 shadow-lg border border-light-subtle h-100 mx-auto"
-                    style="background-color: #fef9f6; max-width: 280px;">
-                    <img src="{{ asset('assets/images/team/01.png') }}" class="img-fluid mb-3"
-                        style="max-height: 180px; object-fit: contain;" alt="Trainer Image">
-                    <h5 class="fw-bold mb-2 text-center" style="color: #864f2e;">Didi Tri Wibowo</h5>
-                    <p class="text-center" style="font-size: 0.95rem;">
-                        Expertise: Programming, Upgrade & Modification, IO Test & Commissioning
-                    </p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
