@@ -1,4 +1,4 @@
-<section id="team" class="py-10 bg-white">
+<section id="team" class="py-20 bg-white">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-dark">Our Profesional Teams</h2>

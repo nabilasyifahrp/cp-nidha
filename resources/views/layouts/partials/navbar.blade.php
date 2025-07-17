@@ -24,7 +24,7 @@
     <div id="header-wrap">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand d-flex align-items-center" href="">
+                <a class="navbar-brand d-flex align-items-center" href="#">
                     <img src="assets/images/logo_perusahaan/nice.png" width="65" height="65" alt="Nice Logo">
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center gap-lg-3 me-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-bold nav-hover" href="#">Home</a>
+                            <a class="nav-link text-dark fw-bold nav-hover" href="{{ route('home.nice') }}">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
