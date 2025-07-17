@@ -27,7 +27,7 @@
     <main class="max-w-4xl mx-auto px-4 py-10">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-[#581c87]">
             @if($service->image)
-            <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-64 object-cover">
+            <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-100 object-cover">
             @endif
             <div class="p-6 space-y-4">
                 <h2 class="text-2xl font-bold text-[#581c87]">{{ $service->title }}</h2>
