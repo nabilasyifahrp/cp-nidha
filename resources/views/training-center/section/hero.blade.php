@@ -7,7 +7,7 @@
 <section class="py-5 bg-white text-dark" style="font-family: 'Poppins', sans-serif;">
     <div class="container">
         <div class="text-center mb-5">
-            <h1 class="fw-bold mb-2" style="color: #b4551a; font-size: 2.5rem;">
+            <h1 class="fw-bold mb-2" style="color: #000000; font-size: 2.5rem;">
                 Nidha Training Center
             </h1>
             <h5 class="fw-semibold" style="color: #822000;">

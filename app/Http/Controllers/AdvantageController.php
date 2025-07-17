@@ -31,7 +31,7 @@ class AdvantageController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil ditambahkan.');
+        return redirect()->route('advantages.index')->with('success', 'Advantage added successfully.');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class AdvantageController extends Controller
 
         $advantage->update($data);
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil diperbarui.');
+        return redirect()->route('advantages.index')->with('success', 'Advantage updated successfully.');
     }
 
     public function destroy($id)
@@ -65,12 +65,6 @@ class AdvantageController extends Controller
 
         $advantage->delete();
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil dihapus.');
-    }
-
-    public function read($id)
-    {
-        $advantage = Advantage::findOrFail($id);
-        return view('admin.advantages.detail', compact('advantage'));
+        return redirect()->route('advantages.index')->with('success', 'Advantage successfully deleted.');
     }
 }
