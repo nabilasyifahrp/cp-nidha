@@ -55,7 +55,7 @@ class ServiceController extends Controller
 
         $request->validate([
             'title'         => 'required|string|max:50',
-            'description'   => 'required|string|max:10',
+            'description'   => 'required|string|max:100',
             'image'         => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
