@@ -25,11 +25,10 @@ use App\Models\Partner;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', [LandingPageController::class, 'index']);
+Route::get('/', [LandingPageController::class, 'index'])->name('home.nice');
+Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
+Route::get('/manpower-supply', [ManPowerController::class, 'index'])->name('manpower.index');
+Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
 
 //Autentikasi
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
@@ -77,20 +76,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/team/{id}', [TeamController::class, 'destroy'])->name('team.destroy');
     Route::get('/team/{id}', [TeamController::class, 'read'])->name('team.read');
 
-   // Partner 
-Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
-Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create');
-Route::post('/partners/store', [PartnerController::class, 'store'])->name('partners.store');
-Route::get('/partners/edit/{partner}', [PartnerController::class, 'edit'])->name('partners.edit'); 
-Route::put('/partners/update/{partner}', [PartnerController::class, 'update'])->name('partners.update'); 
-Route::delete('/partners/{partner}', [PartnerController::class, 'destroy'])->name('partners.destroy');
-Route::get('/partners/{partner}', [PartnerController::class, 'read'])->name('partners.read');
-
-//ManPowerSupply
-Route::get('/training-center', [TrainingCenterController::class, 'index'])->name('training.center');
-Route::get('/iot', [IotPageController::class, 'index'])->name('iot');
-Route::get('/manpower-supply', [ManPowerController::class, 'index'])->name('manpower.index');
-
+    // Partner 
+    Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+    Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create');
+    Route::post('/partners/store', [PartnerController::class, 'store'])->name('partners.store');
+    Route::get('/partners/edit/{partner}', [PartnerController::class, 'edit'])->name('partners.edit'); 
+    Route::put('/partners/update/{partner}', [PartnerController::class, 'update'])->name('partners.update'); 
+    Route::delete('/partners/{partner}', [PartnerController::class, 'destroy'])->name('partners.destroy');
+    Route::get('/partners/{partner}', [PartnerController::class, 'read'])->name('partners.read');
 });
 
 

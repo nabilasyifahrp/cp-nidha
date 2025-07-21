@@ -22,8 +22,8 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string',
+            'title'         => 'required|string|max:50',
+            'description'   => 'required|string|max:100',
             'image'         => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
@@ -54,8 +54,8 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
 
         $request->validate([
-            'title'         => 'required|string|max:255',
-            'description'   => 'required|string',
+            'title'         => 'required|string|max:50',
+            'description'   => 'required|string|max:100',
             'image'         => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 

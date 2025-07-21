@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Nidha Training Center</title>
+    <title>Man Power Supply</title>
     @include('layouts.partials.head')
 </head>
 

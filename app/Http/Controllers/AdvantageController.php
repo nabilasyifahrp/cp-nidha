@@ -24,21 +24,14 @@ class AdvantageController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
-
-        $imagePath = null;
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('advantages', 'public');
-        }
 
         Advantage::create([
             'title' => $request->title,
             'description' => $request->description,
-            'image' => $imagePath,
         ]);
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil ditambahkan.');
+        return redirect()->route('advantages.index')->with('success', 'Advantage added successfully.');
     }
 
     public function edit($id)
@@ -54,7 +47,6 @@ class AdvantageController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
         $data = [
@@ -62,34 +54,17 @@ class AdvantageController extends Controller
             'description' => $request->description,
         ];
 
-        if ($request->hasFile('image')) {
-            if ($advantage->image && Storage::disk('public')->exists($advantage->image)) {
-                Storage::disk('public')->delete($advantage->image);
-            }
-            $data['image'] = $request->file('image')->store('advantages', 'public');
-        }
-
         $advantage->update($data);
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil diperbarui.');
+        return redirect()->route('advantages.index')->with('success', 'Advantage updated successfully.');
     }
 
     public function destroy($id)
     {
         $advantage = Advantage::findOrFail($id);
 
-        if ($advantage->image && Storage::disk('public')->exists($advantage->image)) {
-            Storage::disk('public')->delete($advantage->image);
-        }
-
         $advantage->delete();
 
-        return redirect()->route('advantages.index')->with('success', 'Advantage berhasil dihapus.');
-    }
-
-    public function read($id)
-    {
-        $advantage = Advantage::findOrFail($id);
-        return view('admin.advantages.detail', compact('advantage'));
+        return redirect()->route('advantages.index')->with('success', 'Advantage successfully deleted.');
     }
 }

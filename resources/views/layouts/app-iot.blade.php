@@ -30,7 +30,7 @@
 
         @include('iot.section.team')
 
-        @include('layouts.partials.footer-iot')
+        @include('layouts.partials.footer')
 
     </div>
     <!-- page wrapper end -->

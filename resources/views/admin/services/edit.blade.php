@@ -34,6 +34,15 @@
     <div class="max-w-3xl mx-auto px-4 py-12">
         <div class="bg-white p-8 rounded-3xl shadow-2xl border border-gray-100">
             <h1 class="text-3xl font-bold mb-8 text-purple-600">Edit Service</h1>
+            @if ($errors->any())
+                <div class="mb-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                    <ul class="list-none list-inside text-sm">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <form class="space-y-6" action="{{ route('service.update', $service->id) }}" method="POST" enctype="multipart/form-data" id="editForm">
                 @csrf
