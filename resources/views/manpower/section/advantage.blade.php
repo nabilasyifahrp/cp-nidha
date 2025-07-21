@@ -2,6 +2,7 @@
     <div class="container">
         <h3 class="text-center mb-10 fw-bold text-dark">What Our Advantages?</h3>
         <div class="row text-center g-4">
+
             @foreach ($advantages as $advantage)
             <div class="col-md-4">
                 <img src="{{ asset('assets/images/advantage/advantage' . (($loop->index % 3) + 2) . '.png') }}"class="mb-3" style="height: 140px;">
